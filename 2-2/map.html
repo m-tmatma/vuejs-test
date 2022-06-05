@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Test page</title>
+        <script src="https://unpkg.com/vue@3"></script>
+    </head>
+    <body>
+        <div id="app">
+            <pre>{{ data.map((value, key) => key + ' : 「' + value + '」').join('\n') }} </pre>
+        </div>
+
+        <script>
+            const data = ['windows', 'macOS', 'linux', 'ios', 'android']
+            const appdata = {
+                data() {
+                    return {
+                        data
+                    }
+                }
+            }
+
+            let app = Vue.createApp(appdata)
+            app.mount('#app')
+        </script>
+    </body>
+</html>
