@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Test page</title>
+        <script src="https://unpkg.com/vue@3"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div>{{ num + 'は' + (num % 2 == 0 ? '偶数' : '奇数') + 'です。' }} </div>
+        </div>
+
+        <script>
+            const appdata = {
+                data() {
+                    return {
+                        num : Math.floor(Math.random() * 100)
+                    }
+                }
+            }
+
+            let app = Vue.createApp(appdata)
+            app.mount('#app')
+        </script>
+    </body>
+</html>
